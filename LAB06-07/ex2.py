@@ -8,3 +8,14 @@ def explode(n1):
         n1 //= 10
   
     return tuple(digits)
+    
+def explode(n1):
+    if not isinstance(n1, int):
+        raise ValueError
+    
+    res = ()
+    for i in str(n1):
+        i = int(i)
+        res += (i,)
+
+    return res
